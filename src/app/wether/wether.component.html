@@ -1,16 +1,20 @@
 <div class="row">
     <div class="col-md-6">
         <h4 class="text-center my-4">Search for Weather:</h4>
-        <form [formGroup]='searchWeatherForm'>
+        <form [formGroup] = "weatherSearchForm">
             <div class="form-group">
                 <input class="form-control" type="text" id="weatherLocation" placeholder="Please input a Location"
                     formControlName="location" />
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-success btn-md" (click)="SearchWeather(searchWeatherForm.value)">
+                <button type="submit" class="btn btn-success btn-md" (click)="SearchWeather(weatherSearchForm)">
                     Search for the weather
                 </button>
             </div>
         </form>
+    </div>
+    <div *ngIf= "wheatherData">
+        <p>Tempreture: {{wheatherData.current.temp_c}} C</p>
+        <p>Tempreture: {{wheatherData.current.temp_f}} F</p>
     </div>
 </div>

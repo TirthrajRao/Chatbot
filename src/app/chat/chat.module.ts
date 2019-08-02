@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChatDialogComponent } from './chat-dialog/chat-dialog.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import {ChatService} from '../chat.service';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -17,6 +17,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule ,
     RouterModule.forChild(routes)
   ],
   exports: [ ChatDialogComponent ,RouterModule], 

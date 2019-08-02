@@ -39,4 +39,11 @@ export class ChatService {
   update(msg: Message) {
     this.conversation.next([msg]);
   }
+
+
+  //  getWeather(location){
+  //     return this.http.get(
+  //         'https://api.apixu.com/v1/current.json?key=YOUR_API_KEY&q=' + location
+  //     );
+  // }
 }
